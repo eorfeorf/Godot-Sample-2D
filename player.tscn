@@ -47,3 +47,5 @@ frame_progress = 0.692541
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_5joki")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -10,6 +10,20 @@ func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	hide()
 
+func _on_body_entered(body: Node2D) -> void:
+	# プレイヤーがヒットしたら当たらないようにするためhideにする
+	hide() 
+	hit.emit()
+	# physicsのコールバックでパラメータが変わらないようにするためdisableにする
+	# $CollisionShape2D.disabled = true とは何が違うの？
+	$CollisionShape2D.set_deferred("disabled", true)
+	pass # Replace with function body.
+	
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
