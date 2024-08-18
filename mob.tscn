@@ -48,7 +48,7 @@ animations = [{
 radius = 24.0
 height = 60.0
 
-[node name="Mob" type="RigidBody2D"]
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_sqlgf")
@@ -57,7 +57,7 @@ script = ExtResource("1_sqlgf")
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_4733q")
 animation = &"walk"
-frame_progress = 0.33831
+frame_progress = 0.111806
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
